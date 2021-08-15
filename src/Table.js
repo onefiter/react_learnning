@@ -12,16 +12,7 @@ const TableHeader = () => {
 }
 
 
-const Table = props => {
-    const { characterData, removeCharacter } = props
-  
-    return (
-      <table>
-        <TableHeader />
-        <TableBody characterData={characterData} removeCharacter={removeCharacter} />
-      </table>
-    )
-  }
+
   
 
 const TableBody = props => {
@@ -39,7 +30,17 @@ const TableBody = props => {
   
     return <tbody>{rows}</tbody>
   }
+
+  const Table = props => {
+    const { characterData, removeCharacter } = props;
   
+    return (
+      <table>
+        <TableHeader />
+        <TableBody characterData={characterData} removeCharacter={removeCharacter} />
+      </table>
+    )
+  }
 
 export default Table
 
